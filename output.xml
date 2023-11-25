@@ -1,93 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231124 15:31:48.773" rpa="false" schemaversion="4">
-<suite id="s1" name="Login QMA" source="f:\!Belajar\Robot\robotframeworkawal\loginqma.robot">
-<test id="s1-t1" name="Login QMA" line="10">
-<kw name="Given I am on Login Page">
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231125 01:50:47.466" rpa="false" schemaversion="4">
+<suite id="s1" name="Test" source="f:\!Belajar\Robot\robotframework\tests\test_cases\test.robot">
+<test id="s1-t1" name="DemoQA Input Text" line="6">
+<kw name="Input Text in Field Name" library="steps">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://testingqa-office.nexcloud.id/testingqa/automation/webui/login</arg>
+<arg>${url_demoqa}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231124 15:31:49.129" level="INFO">Opening browser 'chrome' to base url 'https://testingqa-office.nexcloud.id/testingqa/automation/webui/login'.</msg>
-<status status="PASS" starttime="20231124 15:31:49.128" endtime="20231124 15:31:52.148"/>
+<msg timestamp="20231125 01:50:47.692" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/text-box'.</msg>
+<status status="PASS" starttime="20231125 01:50:47.692" endtime="20231125 01:50:53.222"/>
 </kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Nex</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231124 15:31:52.175" level="INFO">Current page contains text 'Nex'.</msg>
-<status status="PASS" starttime="20231124 15:31:52.148" endtime="20231124 15:31:52.175"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>I am on login Page QMA Site</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231124 15:31:52.175" endtime="20231124 15:31:52.176"/>
-</kw>
-<status status="PASS" starttime="20231124 15:31:49.127" endtime="20231124 15:31:52.177"/>
-</kw>
-<kw name="When I am Login my account ${username}" sourcename="I am Login my account ${username}">
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>username</arg>
-<arg>${username}</arg>
+<arg>${text}</arg>
+<arg>Daniel</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231124 15:31:52.180" level="INFO">Typing text 'daniel' into text field 'username'.</msg>
-<status status="PASS" starttime="20231124 15:31:52.178" endtime="20231124 15:31:52.342"/>
+<msg timestamp="20231125 01:50:53.223" level="INFO">Typing text 'Daniel' into text field 'id=userName'.</msg>
+<status status="PASS" starttime="20231125 01:50:53.223" endtime="20231125 01:50:53.325"/>
 </kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>password</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20231124 15:31:52.343" level="INFO">Typing password into text field 'password'.</msg>
-<msg timestamp="20231124 15:31:52.413" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20231124 15:31:52.506" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20231124 15:31:52.342" endtime="20231124 15:31:52.506"/>
-</kw>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>2</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20231124 15:31:52.506" endtime="20231124 15:31:52.507"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>Log in</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231124 15:31:52.508" level="INFO">Clicking button 'Log in'.</msg>
-<status status="PASS" starttime="20231124 15:31:52.507" endtime="20231124 15:31:58.582"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>Login Success</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231124 15:31:58.583" endtime="20231124 15:31:58.583"/>
-</kw>
-<status status="PASS" starttime="20231124 15:31:52.178" endtime="20231124 15:31:58.583"/>
-</kw>
-<kw name="Then I Should see my fullname">
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Daniel Nurrasyid</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231124 15:32:02.603" level="INFO">Current page contains text 'Daniel Nurrasyid'.</msg>
-<status status="PASS" starttime="20231124 15:31:58.585" endtime="20231124 15:32:02.603"/>
-</kw>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>2</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20231124 15:32:02.603" endtime="20231124 15:32:02.603"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>I see Text Daniel Nurrasyid</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231124 15:32:02.603" endtime="20231124 15:32:02.604"/>
-</kw>
-<status status="PASS" starttime="20231124 15:31:58.584" endtime="20231124 15:32:02.604"/>
-</kw>
-<kw name="Then I Close the Browser">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231124 15:32:02.605" endtime="20231124 15:32:06.770"/>
+<status status="PASS" starttime="20231125 01:50:53.325" endtime="20231125 01:50:55.472"/>
 </kw>
-<status status="PASS" starttime="20231124 15:32:02.605" endtime="20231124 15:32:06.770"/>
+<status status="PASS" starttime="20231125 01:50:47.691" endtime="20231125 01:50:55.472"/>
 </kw>
-<doc>Testcase untuk login di QMA menggunakan BDD Style</doc>
-<status status="PASS" starttime="20231124 15:31:49.126" endtime="20231124 15:32:06.771"/>
+<status status="PASS" starttime="20231125 01:50:47.690" endtime="20231125 01:50:55.473"/>
 </test>
-<status status="PASS" starttime="20231124 15:31:48.782" endtime="20231124 15:32:06.773"/>
+<status status="PASS" starttime="20231125 01:50:47.472" endtime="20231125 01:50:55.475"/>
 </suite>
 <statistics>
 <total>
@@ -96,7 +34,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Login QMA">Login QMA</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
 </suite>
 </statistics>
 <errors>
